@@ -1,0 +1,130 @@
+/* Body styling */
+body {
+    background-color: #000;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transform: scale(0.8); /* Zooms out the entire body */
+    transform-origin: center;
+}
+
+/* Music Player Container */
+.music-player {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px; /* Smaller width to enhance the "farther away" effect */
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+    border: 2px solid rgba(0, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+/* Album Art */
+.album-art img {
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
+}
+
+/* Song Info */
+.song-info {
+    margin-bottom: 15px;
+}
+
+.song-title {
+    font-size: 1.5rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+.artist {
+    font-size: 1rem;
+    color: rgba(0, 255, 255, 0.8);
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.control-btn prev, .control-btn play-pause{
+    background: transparent;
+    border: none;
+    color: rgba(0, 255, 255, 0.8);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.control-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);
+}
+
+/* Progress Bar */
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    width: 30%;
+    height: 100%;
+    background-color: #00ffff;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Time Display */
+.current-time, .duration {
+    font-size: 0.9rem;
+    color: rgba(0, 255, 255, 0.7);
+}
+
+/* Volume Control */
+.volume-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: rgba(0, 255, 255, 0.8);
+}
+
+.volume-slider {
+    width: 100px;
+    height: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #00ffff;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.7);
+    appearance: none;
+}
